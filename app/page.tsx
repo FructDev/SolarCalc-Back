@@ -135,8 +135,7 @@ export default function HomePage() {
     try {
       // Recuerda configurar esta URL en tus variables de entorno para producción
       const API_URL =
-        process.env.NEXT_PUBLIC_API_URL ||
-        "http://localhost:3001/api/calculate";
+        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
       const response = await fetch(`${API_URL}/api/calculate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
